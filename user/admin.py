@@ -5,7 +5,7 @@ from .models import User
 
 
 class UserAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('username', 'password')
 
 
 admin.site.register(User, UserAdmin)
