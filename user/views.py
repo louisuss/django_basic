@@ -28,4 +28,4 @@ def register(request):
 
             user.save()
 
-        return render(request, 'register.html')
+        return render(request, 'register.html', res_data)
