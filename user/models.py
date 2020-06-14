@@ -14,3 +14,5 @@ class User(models.Model):
 
     class Meta:
         db_table = 'user'
+        verbose_name = '사용자'
+        verbose_name_plural = '사용자'
