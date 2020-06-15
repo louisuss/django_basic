@@ -23,6 +23,9 @@
                 <input type="{{ field.field.widget.input_type }}" class="form-control" id="{{ field.id_for_label }}"
                     name="{{ field.label }}" placeholder="{{ field.label }}">
             </div>
+            {% if field.errors %}
+            <span style="color: red">{{ field.errors }}</span>
+            {% endif %}
             {% endfor %}
             <button type="submit" class="btn btn-primary">로그인</button>
         </form>
