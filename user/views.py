@@ -27,9 +27,12 @@ def login(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
+            # session
+            request.session['user'] = form.user_id
             return redirect('/')
     else:
         form = LoginForm()
+
     return render(request, 'login.html', {'form': form})
 
 
