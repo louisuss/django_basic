@@ -30,7 +30,7 @@ def login(request):
             user = User.objects.get(username=username)
             if check_password(password, user.password):
                 # 비밀번호 일치
-                # 세션
+                # 세션 - 딕셔너리 변수 사용
                 request.session['user'] = user.id
                 # Redirect Code
                 return redirect('/')
