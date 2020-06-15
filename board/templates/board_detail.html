@@ -8,6 +8,14 @@
             <input type="text" class="form-control" id="title" value="{{ board.title }}" readonly>
             <label for="contents">내용</label>
             <textarea class="form-control" readonly>{{ board.contents }}</textarea>
+            <label for="tags">태그</label>
+            <span id="tags" class="form-control">
+                <!-- 템플릿에서는 | 뒤에 원하는 기능 추가 가능  -->
+                {{ board.tags.all|join:", "}}
+                <!-- {% for tag in board.tags.all %}
+                {{ tag.name }}
+                {% endfor %} -->
+            </span>
         </div>
         <button class="btn btn-primary" onclick="location.href='/board/list/'">돌아가기</button>
     </div>
